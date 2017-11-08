@@ -12,3 +12,9 @@
 */
 
 Route::view('/', 'welcome');
+
+Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function() {
+    CRUD::resource('players', 'PlayerCrudController');
+    CRUD::resource('levels', 'LevelCrudController');
+    CRUD::resource('users', 'UserCrudController');
+});

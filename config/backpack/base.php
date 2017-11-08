@@ -19,7 +19,7 @@ return [
     'logo_mini' => '<b>S</b>N',
 
     // Developer or company name. Shown in footer.
-    'developer_name' => 'Nuruzzaman',
+    'developer_name' => 'Nuruzzaman Milon',
 
     // Developer website. Link in footer.
     'developer_link' => 'https://milon.im',

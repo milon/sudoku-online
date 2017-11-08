@@ -3,10 +3,13 @@
 namespace App\Models;
 
 use App\Models\Game;
+use Backpack\CRUD\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Level extends Model
 {
+    use CrudTrait;
+
     /**
      * The attributes that are mass assignable.
      *

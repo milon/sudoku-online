@@ -6,10 +6,7 @@
 - name
 - email
 - password
-- api_token
-- reset_key
 - remember_token
-- is_admin
 - created_at
 - updated_at
 
@@ -19,11 +16,15 @@
 - token
 - created_at
 
-## profiles
+## players
 
 - id
-- user_id
+- name
+- email
+- password
 - points
+- api_token
+- reset_key
 - meta
 - created_at
 - updated_at

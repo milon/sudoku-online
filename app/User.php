@@ -2,14 +2,14 @@
 
 namespace App;
 
-use App\Models\Profile;
+use Backpack\CRUD\CrudTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Backpack\Base\app\Notifications\ResetPasswordNotification as ResetPasswordNotification;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, CrudTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -20,7 +20,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'is_admin',
     ];
 
     /**
@@ -31,16 +30,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    protected static function boot()
-    {
-        parent::boot();
-        static::creating(function ($user) {
-            if(empty($user->api_token)) {
-                $user->api_token = str_random(60);
-            }
-        });
-    }
 
     /**
      * Send the password reset notification.
@@ -57,11 +46,6 @@ class User extends Authenticatable
     {
         $hash = md5(strtolower(trim($this->attributes['email'])));
         return "http://www.gravatar.com/avatar/$hash";
-    }
-
-    public function profile()
-    {
-        return $this->hasOne(Profile::class);
     }
 
 }
