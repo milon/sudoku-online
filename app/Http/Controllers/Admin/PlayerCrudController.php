@@ -73,6 +73,14 @@ class PlayerCrudController extends CrudController
             'name'  => 'points',
             'label' => 'Points',
         ]);
+        $this->crud->addColumn([
+            'name'  => 'level',
+            'label' => 'Level',
+        ]);
+        $this->crud->addColumn([
+            'name'  => 'episode',
+            'label' => 'Episode',
+        ]);
     }
 
 }
