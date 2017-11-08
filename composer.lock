@@ -4,50 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c133dc62dfb964dfac7d16e5d377e38",
+    "content-hash": "244f347d93d2c56e9b38eb87755bc11f",
     "packages": [
-        {
-            "name": "abcaeffchen/sudoku-php",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/AbcAeffchen/sudoku-php.git",
-                "reference": "2802caa92a787428d749257116a23e15947202c9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/AbcAeffchen/sudoku-php/zipball/2802caa92a787428d749257116a23e15947202c9",
-                "reference": "2802caa92a787428d749257116a23e15947202c9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.8.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "AbcAeffchen\\sudoku\\": [
-                        "src/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL v3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander Schickedanz (AbcAeffchen)",
-                    "email": "abcaeffchen@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Generate random Sudokus of different size and difficulty and check the solution.",
-            "time": "2016-03-26T13:40:52+00:00"
-        },
         {
             "name": "almasaeed2010/adminlte",
             "version": "v2.3.11",
@@ -1711,6 +1669,51 @@
             ],
             "description": "An adapter decorator to enable meta-data caching.",
             "time": "2017-03-20T09:59:34+00:00"
+        },
+        {
+            "name": "milon/sudoku-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/milon/sudoku-php.git",
+                "reference": "cf74bd720189a7156dc8e1eaacb58c0142b8b82c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/milon/sudoku-php/zipball/cf74bd720189a7156dc8e1eaacb58c0142b8b82c",
+                "reference": "cf74bd720189a7156dc8e1eaacb58c0142b8b82c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AbcAeffchen\\sudoku\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "license": [
+                "LGPL v3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Schickedanz (AbcAeffchen)",
+                    "email": "abcaeffchen@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Generate random Sudokus of different size and difficulty and check the solution.",
+            "support": {
+                "issues": "https://github.com/AbcAeffchen/sudoku-php/issues",
+                "source": "https://github.com/milon/sudoku-php/tree/master"
+            },
+            "time": "2017-11-08T15:50:55+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4430,16 +4433,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "6.4.3",
+            "version": "6.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "06b28548fd2b4a20c3cd6e247dc86331a7d4db13"
+                "reference": "562f7dc75d46510a4ed5d16189ae57fbe45a9932"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/06b28548fd2b4a20c3cd6e247dc86331a7d4db13",
-                "reference": "06b28548fd2b4a20c3cd6e247dc86331a7d4db13",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/562f7dc75d46510a4ed5d16189ae57fbe45a9932",
+                "reference": "562f7dc75d46510a4ed5d16189ae57fbe45a9932",
                 "shasum": ""
             },
             "require": {
@@ -4510,7 +4513,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-10-16T13:18:59+00:00"
+            "time": "2017-11-08T11:26:09+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5224,6 +5227,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "milon/sudoku-php": 20,
         "laracasts/generators": 20
     },
     "prefer-stable": false,

@@ -77,8 +77,6 @@ class GameCrudController extends CrudController
                 '4'  => '4',
                 '9'  => '9',
                 '14' => '16',
-                '25' => '25',
-                '36' => '36',
             ],
     	]);
         $this->crud->addField([

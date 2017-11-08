@@ -32,7 +32,19 @@ class UserCrudController extends CrudController
             'password' => 'required|confirmed',
         ]);
 
-		return parent::storeCrud();
+        $user = User::create([
+            'name'  => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
+
+        // show a success message
+        \Alert::success(trans('backpack::crud.insert_success'))->flash();
+
+        // save the redirect choice for next time
+        $this->setSaveAction();
+
+        return $this->performSaveAction($user->getKey());
 	}
 
     public function update(Request $request)
@@ -47,7 +59,20 @@ class UserCrudController extends CrudController
             'password' => 'required|confirmed',
         ]);
 
-        return parent::updateCrud();
+        $user = User::find($request->id);
+        $user->update([
+            'name'  => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
+
+        // show a success message
+        \Alert::success(trans('backpack::crud.update_success'))->flash();
+
+        // save the redirect choice for next time
+        $this->setSaveAction();
+
+        return $this->performSaveAction($user->getKey());
     }
 
     private function declareFromField()

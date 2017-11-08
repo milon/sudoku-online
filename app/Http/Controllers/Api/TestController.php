@@ -12,7 +12,7 @@ class TestController extends Controller
     {
         //$task = Sudoku::generate(9, Sudoku::NORMAL);
 
-        list($task,$solution) = Sudoku::generateWithSolution(9, Sudoku::NORMAL);
+        list($task,$solution) = Sudoku::generateWithSolution(16, Sudoku::EASY);
 
         return [$task, $solution];
     }
