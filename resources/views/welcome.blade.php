@@ -56,16 +56,13 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
+            <div class="top-right links">
+                @guest
+                    <a href="{{ url('/admin/login') }}">Login</a>
+                @else
+                    <a href="{{ url('/admin/dashboard') }}">Dashboard</a>
+                @endguest
+            </div>
 
             <div class="content">
                 <div class="title m-b-md">
