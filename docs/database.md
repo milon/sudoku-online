@@ -25,6 +25,8 @@
 - points
 - api_token
 - reset_key
+- level
+- episode
 - meta
 - created_at
 - updated_at
@@ -47,8 +49,8 @@
 
 - id
 - name
-- points_from
-- points_to
+- rank
+- meta
 - created_at
 - updated_at
 

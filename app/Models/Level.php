@@ -17,8 +17,13 @@ class Level extends Model
      */
     protected $fillable = [
         'name',
-        'points_from',
-        'points_to',
+        'rank',
+        'meta',
+        'game_level',
+    ];
+
+    protected $casts = [
+        'game_level' => 'array',
     ];
 
     public function games()

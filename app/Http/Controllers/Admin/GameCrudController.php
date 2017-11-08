@@ -9,13 +9,6 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 class GameCrudController extends CrudController
 {
-    protected $difficulties = [
-        'Sudoku::EASY'   => Sudoku::EASY,
-        'Sudoku::NORMAL' => Sudoku::NORMAL,
-        'Sudoku::MEDIUM' => Sudoku::MEDIUM,
-        'Sudoku::HARD'   => Sudoku::HARD,
-    ];
-
     public function setUp()
     {
         $this->crud->setModel(Game::class);
@@ -33,31 +26,11 @@ class GameCrudController extends CrudController
 
     public function store(GameRequest $request)
 	{
-        list($problem, $solution) = Sudoku::generateWithSolution((int) $request->grid_size, $this->difficulties[$request->difficulty]);
-
-        $game = new Game;
-        $game->name = $request->name;
-        $game->grid_size = $request->grid_size;
-        $game->difficulty = $request->difficulty;
-        $game->score = $request->score;
-        $game->penalty = $request->penalty;
-        $game->problem = $problem;
-        $game->solution = $solution;
-        $game->save();
-
-        // show a success message
-        \Alert::success(trans('backpack::crud.insert_success'))->flash();
-
-        // save the redirect choice for next time
-        $this->setSaveAction();
-
-        return $this->performSaveAction($game->getKey());
+        return parent::storeCrud();
 	}
 
     public function update(GameRequest $request)
     {
-
-
         return parent::updateCrud();
     }
 

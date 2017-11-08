@@ -16,8 +16,9 @@ class CreateLevelsTable extends Migration
         Schema::create('levels', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('points_from');
-            $table->integer('points_to');
+            $table->integer('rank');
+            $table->json('meta')->nullable();
+            $table->json('game_level')->nullable();
             $table->timestamps();
         });
     }

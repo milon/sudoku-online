@@ -26,23 +26,56 @@ class LevelCrudController extends CrudController
     public function store(Request $request)
 	{
         $request->validate([
-            'name'        => 'required',
-            'points_from' => 'required|numeric',
-            'points_to'   => 'required|numeric',
+            'name' => 'required',
+            'rank' => 'required|numeric',
         ]);
 
-		return parent::storeCrud();
+        $level = Level::create([
+            'name'       => $request->name,
+            'rank'       => $request->rank,
+            'game_level' => $request->game_level,
+        ]);
+
+        $level->games()->detach();
+        foreach (json_decode($request->game_level) as $game) {
+            $level->games()->attach($game->game, ['position' => $game->position]);
+        }
+
+        // show a success message
+        \Alert::success(trans('backpack::crud.insert_success'))->flash();
+
+        // save the redirect choice for next time
+        $this->setSaveAction();
+
+        return $this->performSaveAction($level->getKey());
 	}
 
     public function update(Request $request)
     {
         $request->validate([
-            'name'        => 'required',
-            'points_from' => 'required|numeric',
-            'points_to'   => 'required|numeric',
+            'name' => 'required',
+            'rank' => 'required|numeric',
         ]);
 
-        return parent::updateCrud();
+        $level = Level::find($request->id);
+        $level->update([
+            'name'       => $request->name,
+            'rank'       => $request->rank,
+            'game_level' => $request->game_level,
+        ]);
+
+        $level->games()->detach();
+        foreach (json_decode($request->game_level) as $game) {
+            $level->games()->attach($game->game, ['position' => $game->position]);
+        }
+
+        // show a success message
+        \Alert::success(trans('backpack::crud.update_success'))->flash();
+
+        // save the redirect choice for next time
+        $this->setSaveAction();
+
+        return $this->performSaveAction($level->getKey());
     }
 
     private function declareFromField()
@@ -52,15 +85,22 @@ class LevelCrudController extends CrudController
         	'label' => "Name"
     	]);
         $this->crud->addField([
-        	'name'  => 'points_from',
+        	'name'  => 'rank',
             'type'  => 'number',
-        	'label' => "Points From",
+        	'label' => "Rank",
     	]);
         $this->crud->addField([
-        	'name'  => 'points_to',
-            'type'  => 'number',
-        	'label' => "Points To",
-    	]);
+            'name'            => 'game_level',
+            'label'           => 'Games',
+            'type'            => 'game_table',
+            'entity_singular' => 'game',    // used on the "Add X" button
+            'columns'         => [
+                'game'     => 'Game',
+                'position' => 'Position',
+            ],
+            'max' => 35,
+            'min' => 0,
+        ]);
     }
 
     private function declareTableColumn()
@@ -70,12 +110,8 @@ class LevelCrudController extends CrudController
             'label' => 'Name',
         ]);
         $this->crud->addColumn([
-            'name'  => 'points_from',
-            'label' => 'Points From',
-        ]);
-        $this->crud->addColumn([
-            'name'  => 'points_to',
-            'label' => 'Points To',
+            'name'  => 'rank',
+            'label' => 'Rank',
         ]);
     }
 

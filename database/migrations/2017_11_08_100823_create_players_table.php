@@ -20,6 +20,8 @@ class CreatePlayersTable extends Migration
             $table->integer('points')->default(0);
             $table->string('api_token', 60)->unique();
             $table->string('reset_key', 20)->nullable();
+            $table->integer('level')->nullable();
+            $table->integer('episode')->nullable();
             $table->json('meta')->nullable();
             $table->timestamps();
         });
