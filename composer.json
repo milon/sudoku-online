@@ -7,13 +7,17 @@
     "require": {
         "php": ">=7.0.0",
         "abcaeffchen/sudoku-php": "^1.0",
+        "backpack/base": "^0.8.2",
+        "backpack/crud": "^3.3",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0"
     },
     "require-dev": {
+        "backpack/generators": "^1.1",
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
+        "laracasts/generators": "dev-master",
         "mockery/mockery": "~1.0",
         "phpunit/phpunit": "~6.0"
     },
