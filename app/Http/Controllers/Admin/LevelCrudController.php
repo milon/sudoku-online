@@ -15,6 +15,7 @@ class LevelCrudController extends CrudController
         $this->crud->setEntityNameStrings('level', 'levels');
         $this->crud->setDefaultPageLength(10);
         $this->crud->enableExportButtons();
+        $this->crud->allowAccess(['list', 'create', 'delete', 'show']);
 
         // Declare form field
         $this->declareFromField();
@@ -113,6 +114,22 @@ class LevelCrudController extends CrudController
             'name'  => 'rank',
             'label' => 'Rank',
         ]);
+    }
+
+    public function destroy($id)
+    {
+        $level = Level::find($id);
+
+        $level->games()->detach();
+
+        return parent::destroy($id);
+    }
+
+    public function show($id)
+    {
+        $level = Level::with('games')->find($id);
+
+        return view('admin.levels.show', compact('level'));
     }
 
 }

@@ -12,6 +12,9 @@
 */
 
 Route::view('/', 'welcome');
+Route::get('/login', function() {
+    return redirect()->guest('/admin/login');
+});
 
 Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function() {
     CRUD::resource('players', 'PlayerCrudController');

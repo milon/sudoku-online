@@ -15,6 +15,7 @@ class PlayerCrudController extends CrudController
         $this->crud->setEntityNameStrings('player', 'players');
         $this->crud->setDefaultPageLength(10);
         $this->crud->enableExportButtons();
+        $this->crud->allowAccess(['list', 'create', 'delete', 'show']);
 
         // Declare form field
         $this->declareFromField();
@@ -81,6 +82,13 @@ class PlayerCrudController extends CrudController
             'name'  => 'episode',
             'label' => 'Episode',
         ]);
+    }
+
+    public function show($id)
+    {
+        $player = Player::find($id);
+
+        return view('admin.players.show', compact('player'));
     }
 
 }

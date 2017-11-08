@@ -16,6 +16,7 @@ class GameCrudController extends CrudController
         $this->crud->setEntityNameStrings('sudoku', 'sudoku');
         $this->crud->setDefaultPageLength(10);
         $this->crud->enableExportButtons();
+        $this->crud->allowAccess(['list', 'create', 'delete', 'show']);
 
         // Declare form field
         $this->declareFromField();
@@ -99,6 +100,13 @@ class GameCrudController extends CrudController
             'name'  => 'penalty',
             'label' => 'Penalty',
         ]);
+    }
+
+    public function show($id)
+    {
+        $game = Game::find($id);
+
+        return view('admin.games.show', compact('game'));
     }
 
 }
