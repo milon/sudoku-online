@@ -23,6 +23,7 @@
 
           <li><a href="{{ url('admin/players') }}"><i class="fa fa-gamepad"></i> <span>Players</span></a></li>
           <li><a href="{{ url('admin/levels') }}"><i class="fa fa-th-list"></i> <span>Levels</span></a></li>
+          <li><a href="{{ url('admin/games') }}"><i class="fa fa-table"></i> <span>Sudoku</span></a></li>
           <li><a href="{{ url('admin/users') }}"><i class="fa fa-users"></i> <span>Users</span></a></li>
 
           <!-- ======================================= -->
