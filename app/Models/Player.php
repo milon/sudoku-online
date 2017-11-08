@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Submission;
 use Backpack\CRUD\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
@@ -32,4 +33,10 @@ class Player extends Model
             }
         });
     }
+
+    public function submissions()
+    {
+        return $this->hasMany(Submission::class);
+    }
+
 }

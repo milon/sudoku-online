@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Level;
+use App\Models\Submission;
 use Backpack\CRUD\CrudTrait;
 use AbcAeffchen\sudoku\Sudoku;
 use Illuminate\Database\Eloquent\Model;
@@ -37,6 +38,11 @@ class Game extends Model
         return $this->belongsToMany(Level::class)
             ->withPivot(['position'])
             ->withTimestamps();
+    }
+
+    public function submissions()
+    {
+        return $this->hasMany(Submission::class);
     }
 
     protected static function boot()
