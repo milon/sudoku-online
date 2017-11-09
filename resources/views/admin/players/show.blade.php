@@ -72,6 +72,8 @@
                         </tbody>
                     </table>
 
+					@include('admin.players._submissions')
+
                 </div>
 
             </div>

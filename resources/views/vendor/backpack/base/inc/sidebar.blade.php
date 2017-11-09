@@ -21,9 +21,11 @@
           <!-- ================================================ -->
           <li><a href="{{ backpack_url('dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
 
+          <li><a href="{{ url('admin/leadboard') }}"><i class="fa fa-trophy"></i> <span>Leadboard</span></a></li>
           <li><a href="{{ url('admin/players') }}"><i class="fa fa-gamepad"></i> <span>Players</span></a></li>
           <li><a href="{{ url('admin/levels') }}"><i class="fa fa-th-list"></i> <span>Levels</span></a></li>
           <li><a href="{{ url('admin/games') }}"><i class="fa fa-table"></i> <span>Sudoku</span></a></li>
+          <li><a href="{{ url('admin/submissions') }}"><i class="fa fa-file-code-o"></i> <span>Submissions</span></a></li>
           <li><a href="{{ url('admin/users') }}"><i class="fa fa-users"></i> <span>Users</span></a></li>
 
           <!-- ======================================= -->

@@ -38,7 +38,7 @@
             'color' => 'red',
             'count' => $submission_count,
             'icon'  => 'fa fa-object-group',
-            'url'   => url('/admin/players')
+            'url'   => url('/admin/submissions')
         ])
     </div>
 </div>

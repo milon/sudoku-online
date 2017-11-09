@@ -21,4 +21,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('levels', 'LevelCrudController');
     CRUD::resource('games', 'GameCrudController');
     CRUD::resource('users', 'UserCrudController');
+    Route::get('/submissions', 'SubmissionController@index');
+    Route::get('/leadboard', 'LeadboardController@index');
 });

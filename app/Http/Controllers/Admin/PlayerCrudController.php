@@ -116,8 +116,9 @@ class PlayerCrudController extends CrudController
     public function show($id)
     {
         $player = Player::find($id);
+        $submissions = $player->submissions()->with('game')->latest()->paginate(10);
 
-        return view('admin.players.show', compact('player'));
+        return view('admin.players.show', compact('player', 'submissions'));
     }
 
 }
