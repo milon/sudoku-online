@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Player;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 class PlayerCrudController extends CrudController
@@ -26,26 +27,44 @@ class PlayerCrudController extends CrudController
 
     public function store(Request $request)
 	{
-        $request->validate([
+        $data = $request->validate([
             'name'     => 'required',
             'email'    => 'required|unique:players|email',
+            'password' => 'required|confirmed',
         ]);
 
-		return parent::storeCrud();
+		$player = Player::create($data);
+
+        // show a success message
+        \Alert::success(trans('backpack::crud.insert_success'))->flash();
+
+        // save the redirect choice for next time
+        $this->setSaveAction();
+
+        return $this->performSaveAction($player->getKey());
 	}
 
     public function update(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
             'name'     => 'required',
             'email'    => [
                 'required',
                 'email',
                 Rule::unique('players')->ignore($request->id)
             ],
+            'password' => 'required|confirmed',
         ]);
 
-        return parent::updateCrud();
+        $player = Player::find($request->id);
+
+        // show a success message
+        \Alert::success(trans('backpack::crud.update_success'))->flash();
+
+        // save the redirect choice for next time
+        $this->setSaveAction();
+
+        return $this->performSaveAction($player->getKey());
     }
 
     private function declareFromField()
@@ -57,6 +76,16 @@ class PlayerCrudController extends CrudController
         $this->crud->addField([
         	'name'  => 'email',
         	'label' => "Email Address",
+    	]);
+        $this->crud->addField([
+        	'name'  => 'password',
+        	'label' => 'Password',
+            'type'  => 'password',
+    	]);
+        $this->crud->addField([
+        	'name'  => 'password_confirmation',
+        	'label' => 'Confirm Password',
+            'type'  => 'password',
     	]);
     }
 

@@ -15,12 +15,14 @@ class PlayersTableSeeder extends Seeder
         Player::create([
             'name'      => 'Nuruzzaman Milon',
             'email'     => 'contact@milon.im',
+            'password'  => bcrypt('password'),
             'api_token' => 'pmhhNtUjSXzLsD99NAhOUKxAzAYg8TZzo23TAUDiDHo8pCFh17RF5FbdIVc3',
         ]);
 
         Player::create([
             'name'      => 'Surayea Rashid Shanti',
             'email'     => 'surayea.rashid@gmail.com',
+            'password'  => bcrypt('password'),
             'api_token' => 'TtzWGDsiFBWNLYNNIhVQacVf4VYmcCcVERERav9PVUMk8RHwVF6pF369XFsj',
         ]);
     }

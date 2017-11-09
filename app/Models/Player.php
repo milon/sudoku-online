@@ -18,6 +18,7 @@ class Player extends Model
     protected $fillable = [
         'name',
         'email',
+        'password',
         'points',
         'api_token',
         'reset_key',
