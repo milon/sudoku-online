@@ -6,6 +6,11 @@ Route::post('/auth/token', 'PlayerAuthController@getAccessToken');
 Route::post('/auth/token/reset', 'PlayerAuthController@passwordResetRequest');
 Route::post('/auth/token/change', 'PlayerAuthController@changePassword');
 
-Route::get('/games', 'GameController@index');
-Route::get('/levels', 'LevelController@index');
-Route::get('/levels/{level}', 'LevelController@show');
+Route::group(['middleware' => 'auth.player'], function() {
+    Route::get('/games', 'GameController@index');
+    Route::get('/levels', 'LevelController@index');
+    Route::get('/levels/{level}', 'LevelController@show');
+
+    Route::get('players/next-game', 'PlayerController@nextGame');
+    Route::post('players/submit-game', 'PlayerController@submitGame');
+});

@@ -17,7 +17,7 @@ class Submission extends Model
     protected $statusList = [
         1 => 'Successful',
         2 => 'Failed',
-    ]
+    ];
 
     public function player()
     {
