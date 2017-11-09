@@ -19,13 +19,21 @@ class PlayerAuthMiddleware
         $token = $request->header('X-Auth-Token') ?: $request->api_token;
 
         if (empty($token)) {
-            return response()->json(['errors' => "Unable to authenticate without valid token."])->setStatusCode(401);
+            return response()->json([
+                'data' => [
+                    'message' => "Unable to authenticate without valid token.",
+                ]
+            ])->setStatusCode(401);
         }
 
         $player = Player::where('api_token', $token)->first();
 
         if(! $player) {
-            return response()->json(['errors' => "Unable to authenticate with invalid token."])->setStatusCode(401);
+            return response()->json([
+                'data' => [
+                    'message' => "Unable to authenticate with invalid token.",
+                ]
+            ])->setStatusCode(401);
         }
 
         return $next($request);
