@@ -35,6 +35,11 @@ class Player extends Model
         });
     }
 
+    /**
+     * Relations with submission
+     *
+     * @return Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function submissions()
     {
         return $this->hasMany(Submission::class);

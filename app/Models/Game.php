@@ -28,11 +28,21 @@ class Game extends Model
         'meta',
     ];
 
+    /**
+     * Attributes that will be casted automatically
+     *
+     * @var array
+     */
     protected $casts = [
         'problem'  => 'array',
         'solution' => 'array',
     ];
 
+    /**
+     * Relations with level
+     *
+     * @return Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function levels()
     {
         return $this->belongsToMany(Level::class)
@@ -40,11 +50,21 @@ class Game extends Model
             ->withTimestamps();
     }
 
+    /**
+     * Relations with submissions
+     *
+     * @return Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function submissions()
     {
         return $this->hasMany(Submission::class);
     }
 
+    /**
+     * This method will run every time an operation run
+     *
+     * @return null
+     */
     protected static function boot()
     {
         parent::boot();

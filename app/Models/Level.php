@@ -22,10 +22,20 @@ class Level extends Model
         'game_level',
     ];
 
+    /**
+     * Attributes that will be casted automatically
+     *
+     * @var array
+     */
     protected $casts = [
         'game_level' => 'array',
     ];
 
+    /**
+     * Relations with game
+     *
+     * @return Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function games()
     {
         return $this->belongsToMany(Game::class)
