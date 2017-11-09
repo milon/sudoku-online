@@ -67,6 +67,18 @@
                         </tbody>
                     </table>
 
+					<div class="row">
+						<div class="col-sm-6">
+							<h4>Problem</h4>
+							@include('admin.games._sudoku', ['table' => $game->problem])
+						</div>
+
+						<div class="col-sm-6">
+							<h4>Solutions</h4>
+							@include('admin.games._sudoku', ['table' => $game->solution])
+						</div>
+					</div>
+
                 </div>
 
             </div>
