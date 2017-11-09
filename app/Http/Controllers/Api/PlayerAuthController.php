@@ -11,6 +11,23 @@ use App\Http\Resources\PlayerAuthResource;
 
 class PlayerAuthController extends Controller
 {
+    public function register(Request $request)
+    {
+        $request->validate([
+            'name'     => 'required',
+            'email'    => 'required|unique:players|email',
+            'password' => 'required',
+        ]);
+
+        $player = Player::create([
+            'name'     => $request->name,
+            'email'    => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
+
+        return new PlayerAuthResource($player);
+    }
+
     public function getAccessToken(Request $request)
     {
         $request->validate([

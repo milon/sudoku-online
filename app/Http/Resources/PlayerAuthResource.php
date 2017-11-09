@@ -18,7 +18,7 @@ class PlayerAuthResource extends Resource
             'name'      => $this->name,
             'email'     => $this->email,
             'api_token' => $this->api_token,
-            'points'    => $this->points,
+            'points'    => (int) $this->points,
             'level'     => $this->level,
             'episode'   => $this->episode,
         ];

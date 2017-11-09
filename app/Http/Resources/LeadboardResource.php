@@ -16,7 +16,7 @@ class LeadboardResource extends Resource
     {
         return [
             'name'    => $this->name,
-            'points'  => $this->points,
+            'points'  => (int) $this->points,
             'level'   => $this->level,
             'episode' => $this->episode,
         ];

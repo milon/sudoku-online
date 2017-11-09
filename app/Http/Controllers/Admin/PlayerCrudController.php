@@ -27,13 +27,17 @@ class PlayerCrudController extends CrudController
 
     public function store(Request $request)
 	{
-        $data = $request->validate([
+        $request->validate([
             'name'     => 'required',
             'email'    => 'required|unique:players|email',
             'password' => 'required|confirmed',
         ]);
 
-		$player = Player::create($data);
+		$player = Player::create([
+            'name'     => $request->name,
+            'email'    => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
 
         // show a success message
         \Alert::success(trans('backpack::crud.insert_success'))->flash();
@@ -57,6 +61,11 @@ class PlayerCrudController extends CrudController
         ]);
 
         $player = Player::find($request->id);
+        $player = $player->update([
+            'name'     => $request->name,
+            'email'    => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
 
         // show a success message
         \Alert::success(trans('backpack::crud.update_success'))->flash();
