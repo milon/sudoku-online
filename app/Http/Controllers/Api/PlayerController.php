@@ -11,6 +11,12 @@ use App\Http\Resources\GameResource;
 
 class PlayerController extends Controller
 {
+    /**
+     * Get next game of a player
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function nextGame(Request $request)
     {
         $player = getPlayer();
@@ -52,6 +58,12 @@ class PlayerController extends Controller
         return new GameResource($game);
     }
 
+    /**
+     * Submit a solution
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function submitGame(Request $request)
     {
         $request->validate([
@@ -104,6 +116,12 @@ class PlayerController extends Controller
         ]);
     }
 
+    /**
+     * Get a player's level
+     *
+     * @param  Player $player
+     * @return mixed
+     */
     public function getPlayerLevel($player)
     {
         if(! $player->level) {
@@ -114,6 +132,12 @@ class PlayerController extends Controller
         return $player->level;
     }
 
+    /**
+     * Get a player's episode
+     *
+     * @param  Player $player
+     * @return mixed
+     */
     public function getPlayerEpisode($player)
     {
         if(! $player->episode) {
@@ -124,6 +148,13 @@ class PlayerController extends Controller
         return $player->episode;
     }
 
+    /**
+     * Update players profile for a successful submission
+     *
+     * @param  Player $player
+     * @param  Game $game
+     * @return mixed
+     */
     private function updateSuccessfulSubmission($player, $game)
     {
         Submission::create([
@@ -138,6 +169,13 @@ class PlayerController extends Controller
         $player->save();
     }
 
+    /**
+     * Update players profile for a failed submission
+     *
+     * @param  Player $player
+     * @param  Game $game
+     * @return mixed
+     */
     private function updateFailedSubmission($player, $game)
     {
         Submission::create([

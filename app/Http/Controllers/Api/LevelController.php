@@ -9,6 +9,12 @@ use App\Http\Resources\LevelResource;
 
 class LevelController extends Controller
 {
+    /**
+     * Get level list
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function index(Request $request)
     {
         $levels = Level::when($request->name, function($query) use ($request) {
@@ -18,6 +24,12 @@ class LevelController extends Controller
         return LevelResource::collection($levels);
     }
 
+    /**
+     * Get a level details with games associated
+     *
+     * @param  Level  $level
+     * @return mixed
+     */
     public function show(Level $level)
     {
         $level->load(['games']);

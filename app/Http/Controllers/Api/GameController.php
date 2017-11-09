@@ -9,6 +9,12 @@ use App\Http\Resources\GameResource;
 
 class GameController extends Controller
 {
+    /**
+     * Get all games
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function index(Request $request)
     {
         $games = Game::when($request->name, function($query) use ($request) {

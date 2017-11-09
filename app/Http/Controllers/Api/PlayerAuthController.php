@@ -11,6 +11,12 @@ use App\Http\Resources\PlayerAuthResource;
 
 class PlayerAuthController extends Controller
 {
+    /**
+     * Register a new player
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function register(Request $request)
     {
         $request->validate([
@@ -28,6 +34,12 @@ class PlayerAuthController extends Controller
         return new PlayerAuthResource($player);
     }
 
+    /**
+     * Get players access token
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function getAccessToken(Request $request)
     {
         $request->validate([
@@ -56,6 +68,12 @@ class PlayerAuthController extends Controller
         ])->setStatusCode(401);
     }
 
+    /**
+     * Get password reset token
+     *
+     * @param Request $request
+     * @return mixed
+     */
     public function passwordResetRequest(Request $request)
     {
         $request->validate([
@@ -79,6 +97,12 @@ class PlayerAuthController extends Controller
         ]);
     }
 
+    /**
+     * Change password
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function changePassword(Request $request)
     {
         $request->validate([
