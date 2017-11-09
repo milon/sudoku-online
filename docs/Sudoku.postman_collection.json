@@ -1,0 +1,375 @@
+{
+	"info": {
+		"name": "Sudoku",
+		"_postman_id": "7819e693-7e99-0823-f82e-0502b4253e3c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"description": "",
+			"item": [
+				{
+					"name": "Player Registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "anam",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "me@anam.co",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "sudoku.dev/api/register",
+							"host": [
+								"sudoku",
+								"dev"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Player Auth Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "me@anam.co",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "sudoku.dev/api/auth/token",
+							"host": [
+								"sudoku",
+								"dev"
+							],
+							"path": [
+								"api",
+								"auth",
+								"token"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Player Auth Token Reset Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "contact@milon.im",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "sudoku.dev/api/auth/token/reset",
+							"host": [
+								"sudoku",
+								"dev"
+							],
+							"path": [
+								"api",
+								"auth",
+								"token",
+								"reset"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change Player Auth Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "contact@milon.im",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "reset_key",
+									"value": "mzn00DYeK1RJ65V",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "sudoku.dev/api/auth/token/change",
+							"host": [
+								"sudoku",
+								"dev"
+							],
+							"path": [
+								"api",
+								"auth",
+								"token",
+								"change"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Listings",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Games List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "pmhhNtUjSXzLsD99NAhOUKxAzAYg8TZzo23TAUDiDHo8pCFh17RF5FbdIVc3"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "sudoku.dev/api/games",
+							"host": [
+								"sudoku",
+								"dev"
+							],
+							"path": [
+								"api",
+								"games"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Levels List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "pmhhNtUjSXzLsD99NAhOUKxAzAYg8TZzo23TAUDiDHo8pCFh17RF5FbdIVc3"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "sudoku.dev/api/levels",
+							"host": [
+								"sudoku",
+								"dev"
+							],
+							"path": [
+								"api",
+								"levels"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Level Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "pmhhNtUjSXzLsD99NAhOUKxAzAYg8TZzo23TAUDiDHo8pCFh17RF5FbdIVc3"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "sudoku.dev/api/levels/1",
+							"host": [
+								"sudoku",
+								"dev"
+							],
+							"path": [
+								"api",
+								"levels",
+								"1"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Leadboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "pmhhNtUjSXzLsD99NAhOUKxAzAYg8TZzo23TAUDiDHo8pCFh17RF5FbdIVc3"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "sudoku.dev/api/leadboard",
+							"host": [
+								"sudoku",
+								"dev"
+							],
+							"path": [
+								"api",
+								"leadboard"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Game Play",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Next Game",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "pmhhNtUjSXzLsD99NAhOUKxAzAYg8TZzo23TAUDiDHo8pCFh17RF5FbdIVc3"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "sudoku.dev/api/players/next-game",
+							"host": [
+								"sudoku",
+								"dev"
+							],
+							"path": [
+								"api",
+								"players",
+								"next-game"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Game solution",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "pmhhNtUjSXzLsD99NAhOUKxAzAYg8TZzo23TAUDiDHo8pCFh17RF5FbdIVc3"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "solution",
+									"value": "[[2, 4, 3, 1], [1, 3, 4, 2], [3, 2, 1, 4], [4, 1, 2, 3]]",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "sudoku.dev/api/players/submit-game",
+							"host": [
+								"sudoku",
+								"dev"
+							],
+							"path": [
+								"api",
+								"players",
+								"submit-game"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
