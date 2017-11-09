@@ -102,6 +102,10 @@ Here is the steps of the game for a player-
 - Once all the problem of a level is finished, it will move you to next level.
 - You can get the leadboard to get top scorer players. (via `/api/leadboard` endpoint)
 
+## To-Do
+
+Due to shortage of time, automated testing is not done yet. It will be added in future.
+
 ## Developer
 
 Nuruzzaman Milon<br>
