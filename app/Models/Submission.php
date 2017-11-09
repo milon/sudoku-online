@@ -14,6 +14,11 @@ class Submission extends Model
         'status',
     ];
 
+    protected $statusList = [
+        1 => 'Successful',
+        2 => 'Failed',
+    ]
+
     public function player()
     {
         return $this->belongsTo(Player::class);
@@ -22,5 +27,10 @@ class Submission extends Model
     public function game()
     {
         return $this->belongsTo(Game::class);
+    }
+
+    public function getStatusNameAttribute()
+    {
+        return $this->statusList[$this->status];
     }
 }

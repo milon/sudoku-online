@@ -55,7 +55,7 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="{{ url('') }}" class="logo">
+        <a href="{{ url('/admin/dashboard') }}" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini">{!! config('backpack.base.logo_mini') !!}</span>
           <!-- logo for regular state and mobile devices -->
@@ -140,7 +140,7 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            
+
         // Set active state on menu element
         var current_url = "{{ Request::fullUrl() }}";
         var full_url = current_url+location.search;
@@ -155,7 +155,7 @@
                 function() { return $(this).attr('href').startsWith(current_url) || current_url.startsWith($(this).attr('href')); }
             );
         }
-        
+
         $curentPageLink.parents('li').addClass('active');
         {{-- Enable deep link to tab --}}
         var activeTab = $('[href="' + location.hash.replace("#", "#tab_") + '"]');
