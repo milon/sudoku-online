@@ -8,6 +8,11 @@ use App\Http\Controllers\Controller;
 
 class SubmissionController extends Controller
 {
+    /**
+     * Show all the submission
+     *
+     * @return View $view
+     */
     public function index()
     {
         $submissions = Submission::with(['game', 'player'])->latest()->paginate(15);

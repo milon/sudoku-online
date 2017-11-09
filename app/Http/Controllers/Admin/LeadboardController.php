@@ -8,6 +8,11 @@ use App\Http\Controllers\Controller;
 
 class LeadboardController extends Controller
 {
+    /**
+     * Get the lead scorer
+     *
+     * @return View $view
+     */
     public function index()
     {
         $players = Player::orderBy('points', 'desc')->take(10)->get();

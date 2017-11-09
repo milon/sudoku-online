@@ -8,6 +8,9 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 class LevelCrudController extends CrudController
 {
+    /**
+     * Setup of the controller
+     */
     public function setUp()
     {
         $this->crud->setModel(Level::class);
@@ -24,6 +27,12 @@ class LevelCrudController extends CrudController
         $this->declareTableColumn();
     }
 
+    /**
+     * Create a new level
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function store(Request $request)
 	{
         $request->validate([
@@ -51,6 +60,12 @@ class LevelCrudController extends CrudController
         return $this->performSaveAction($level->getKey());
 	}
 
+    /**
+     * Update a new level
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function update(Request $request)
     {
         $request->validate([
@@ -79,6 +94,11 @@ class LevelCrudController extends CrudController
         return $this->performSaveAction($level->getKey());
     }
 
+    /**
+     * Declare form fields
+     *
+     * @return null
+     */
     private function declareFromField()
     {
         $this->crud->addField([
@@ -104,6 +124,11 @@ class LevelCrudController extends CrudController
         ]);
     }
 
+    /**
+     * Declare colums for table
+     *
+     * @return null
+     */
     private function declareTableColumn()
     {
         $this->crud->addColumn([
@@ -116,6 +141,11 @@ class LevelCrudController extends CrudController
         ]);
     }
 
+    /**
+     * Delete a level
+     * @param  int $id
+     * @return mixed
+     */
     public function destroy($id)
     {
         $level = Level::find($id);
@@ -125,6 +155,12 @@ class LevelCrudController extends CrudController
         return parent::destroy($id);
     }
 
+    /**
+     * Details of a level
+     *
+     * @param  int $id
+     * @return mixed
+     */
     public function show($id)
     {
         $level = Level::with('games')->find($id);

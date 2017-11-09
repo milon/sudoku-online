@@ -9,6 +9,9 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 class PlayerCrudController extends CrudController
 {
+    /**
+     * Setup of the controller
+     */
     public function setUp()
     {
         $this->crud->setModel(Player::class);
@@ -25,6 +28,12 @@ class PlayerCrudController extends CrudController
         $this->declareTableColumn();
     }
 
+    /**
+     * Create a new player
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function store(Request $request)
 	{
         $request->validate([
@@ -48,6 +57,12 @@ class PlayerCrudController extends CrudController
         return $this->performSaveAction($player->getKey());
 	}
 
+    /**
+     * Update a new player
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function update(Request $request)
     {
         $data = $request->validate([
@@ -76,6 +91,11 @@ class PlayerCrudController extends CrudController
         return $this->performSaveAction($player->getKey());
     }
 
+    /**
+     * Declare form fields
+     *
+     * @return null
+     */
     private function declareFromField()
     {
         $this->crud->addField([
@@ -98,6 +118,11 @@ class PlayerCrudController extends CrudController
     	]);
     }
 
+    /**
+     * Declare colums for table
+     *
+     * @return null
+     */
     private function declareTableColumn()
     {
         $this->crud->addColumn([
@@ -122,6 +147,12 @@ class PlayerCrudController extends CrudController
         ]);
     }
 
+    /**
+     * Show details of a player
+     *
+     * @param  int $id
+     * @return View $view
+     */
     public function show($id)
     {
         $player = Player::find($id);

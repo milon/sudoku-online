@@ -9,6 +9,9 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 class GameCrudController extends CrudController
 {
+    /**
+     * Setup of the controller
+     */
     public function setUp()
     {
         $this->crud->setModel(Game::class);
@@ -25,16 +28,33 @@ class GameCrudController extends CrudController
         $this->declareTableColumn();
     }
 
+    /**
+     * Create a new game
+     *
+     * @param  GameRequest $request
+     * @return mixed
+     */
     public function store(GameRequest $request)
 	{
         return parent::storeCrud();
 	}
 
+    /**
+     * Update a new game
+     *
+     * @param  GameRequest $request
+     * @return mixed
+     */
     public function update(GameRequest $request)
     {
         return parent::updateCrud();
     }
 
+    /**
+     * Declare form fields
+     *
+     * @return null
+     */
     public function declareFromField()
     {
         $this->crud->addField([
@@ -78,6 +98,11 @@ class GameCrudController extends CrudController
     	]);
     }
 
+    /**
+     * Declare colums for table
+     *
+     * @return null
+     */
     public function declareTableColumn()
     {
         $this->crud->addColumn([
@@ -102,6 +127,12 @@ class GameCrudController extends CrudController
         ]);
     }
 
+    /**
+     * Show details of a game
+     *
+     * @param  int $id
+     * @return View $view
+     */
     public function show($id)
     {
         $game = Game::find($id);

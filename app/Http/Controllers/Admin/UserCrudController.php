@@ -9,6 +9,9 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 class UserCrudController extends CrudController
 {
+    /**
+     * Setup of the controller
+     */
     public function setUp()
     {
         $this->crud->setModel(User::class);
@@ -24,6 +27,12 @@ class UserCrudController extends CrudController
         $this->declareTableColumn();
     }
 
+    /**
+     * Create a new user
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function store(Request $request)
 	{
         $request->validate([
@@ -47,6 +56,12 @@ class UserCrudController extends CrudController
         return $this->performSaveAction($user->getKey());
 	}
 
+    /**
+     * Update a new user
+     *
+     * @param  Request $request
+     * @return mixed
+     */
     public function update(Request $request)
     {
         $request->validate([
@@ -75,6 +90,11 @@ class UserCrudController extends CrudController
         return $this->performSaveAction($user->getKey());
     }
 
+    /**
+     * Declare form fields
+     *
+     * @return null
+     */
     private function declareFromField()
     {
         $this->crud->addField([
@@ -97,6 +117,11 @@ class UserCrudController extends CrudController
     	]);
     }
 
+    /**
+     * Declare colums for table
+     *
+     * @return null
+     */
     private function declareTableColumn()
     {
         $this->crud->addColumn([
