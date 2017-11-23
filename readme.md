@@ -21,7 +21,7 @@ This application is created based on Laravel 5.5 and follows laravel's standard 
 First unzip the folder using following command-
 
 ```
-unzip sudoku.zip -d sudoku
+git clone git@github.com:milon/sudoku-online.git sudoku
 ```
 
 Then write the following commands in terminal one by one-
