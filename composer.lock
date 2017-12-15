@@ -48,16 +48,16 @@
         },
         {
             "name": "backpack/base",
-            "version": "0.8.3",
+            "version": "0.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/Base.git",
-                "reference": "9cae2b6b19e6b016a21d16d767469215188aaa40"
+                "reference": "746b7f59a0b6518c0aac8584b16fa1c5b6552186"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/Base/zipball/9cae2b6b19e6b016a21d16d767469215188aaa40",
-                "reference": "9cae2b6b19e6b016a21d16d767469215188aaa40",
+                "url": "https://api.github.com/repos/Laravel-Backpack/Base/zipball/746b7f59a0b6518c0aac8584b16fa1c5b6552186",
+                "reference": "746b7f59a0b6518c0aac8584b16fa1c5b6552186",
                 "shasum": ""
             },
             "require": {
@@ -108,20 +108,20 @@
                 "backpack",
                 "base"
             ],
-            "time": "2017-12-02T08:13:32+00:00"
+            "time": "2017-12-12T11:25:35+00:00"
         },
         {
             "name": "backpack/crud",
-            "version": "3.3.1",
+            "version": "3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "b23f944a3dabc5ce573e9bab143019e376d9ee7a"
+                "reference": "4c0b8d3835a8a6742d62d466649871aed717996b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/b23f944a3dabc5ce573e9bab143019e376d9ee7a",
-                "reference": "b23f944a3dabc5ce573e9bab143019e376d9ee7a",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/4c0b8d3835a8a6742d62d466649871aed717996b",
+                "reference": "4c0b8d3835a8a6742d62d466649871aed717996b",
                 "shasum": ""
             },
             "require": {
@@ -180,7 +180,7 @@
                 "read",
                 "update"
             ],
-            "time": "2017-11-06T12:22:20+00:00"
+            "time": "2017-12-14T09:41:21+00:00"
         },
         {
             "name": "barryvdh/elfinder-flysystem-driver",
