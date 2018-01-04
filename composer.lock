@@ -48,16 +48,16 @@
         },
         {
             "name": "backpack/base",
-            "version": "0.8.4",
+            "version": "0.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/Base.git",
-                "reference": "746b7f59a0b6518c0aac8584b16fa1c5b6552186"
+                "reference": "26c797c7be2074bf426e418938d3f57cedf2c839"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/Base/zipball/746b7f59a0b6518c0aac8584b16fa1c5b6552186",
-                "reference": "746b7f59a0b6518c0aac8584b16fa1c5b6552186",
+                "url": "https://api.github.com/repos/Laravel-Backpack/Base/zipball/26c797c7be2074bf426e418938d3f57cedf2c839",
+                "reference": "26c797c7be2074bf426e418938d3f57cedf2c839",
                 "shasum": ""
             },
             "require": {
@@ -108,7 +108,7 @@
                 "backpack",
                 "base"
             ],
-            "time": "2017-12-12T11:25:35+00:00"
+            "time": "2018-01-03T07:42:54+00:00"
         },
         {
             "name": "backpack/crud",
