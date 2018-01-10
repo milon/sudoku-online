@@ -48,16 +48,16 @@
         },
         {
             "name": "backpack/base",
-            "version": "0.8.5",
+            "version": "0.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/Base.git",
-                "reference": "26c797c7be2074bf426e418938d3f57cedf2c839"
+                "reference": "8f7cb8fca47b26a5d5c25feac5fe6707e7773d7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/Base/zipball/26c797c7be2074bf426e418938d3f57cedf2c839",
-                "reference": "26c797c7be2074bf426e418938d3f57cedf2c839",
+                "url": "https://api.github.com/repos/Laravel-Backpack/Base/zipball/8f7cb8fca47b26a5d5c25feac5fe6707e7773d7d",
+                "reference": "8f7cb8fca47b26a5d5c25feac5fe6707e7773d7d",
                 "shasum": ""
             },
             "require": {
@@ -108,20 +108,20 @@
                 "backpack",
                 "base"
             ],
-            "time": "2018-01-03T07:42:54+00:00"
+            "time": "2018-01-10T10:02:25+00:00"
         },
         {
             "name": "backpack/crud",
-            "version": "3.3.4",
+            "version": "3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "c6ca8a109ea4a1e4181c8bf2c99e26ed519ef2de"
+                "reference": "b2ffc93ebb93c177e250215166a651056dc8497b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/c6ca8a109ea4a1e4181c8bf2c99e26ed519ef2de",
-                "reference": "c6ca8a109ea4a1e4181c8bf2c99e26ed519ef2de",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/b2ffc93ebb93c177e250215166a651056dc8497b",
+                "reference": "b2ffc93ebb93c177e250215166a651056dc8497b",
                 "shasum": ""
             },
             "require": {
@@ -146,7 +146,10 @@
                 "laravel": {
                     "providers": [
                         "Backpack\\CRUD\\CrudServiceProvider"
-                    ]
+                    ],
+                    "aliases": {
+                        "CRUD": "Backpack\\CRUD\\CrudServiceProvider"
+                    }
                 }
             },
             "autoload": {
@@ -180,7 +183,7 @@
                 "read",
                 "update"
             ],
-            "time": "2017-12-19T09:51:51+00:00"
+            "time": "2018-01-10T09:54:41+00:00"
         },
         {
             "name": "barryvdh/elfinder-flysystem-driver",
@@ -724,20 +727,20 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462"
+                "reference": "5527a48b7313d15261292c149e55e26eae771b0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/e11d84c6e018beedd929cff5220969a3c6d1d462",
-                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/5527a48b7313d15261292c149e55e26eae771b0a",
+                "reference": "5527a48b7313d15261292c149e55e26eae771b0a",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.2"
@@ -745,7 +748,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -787,7 +790,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2017-07-22T12:18:28+00:00"
+            "time": "2018-01-09T20:05:19+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -4607,16 +4610,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "5.0.5",
+            "version": "5.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "283b9f4f670e3a6fd6c4ff95c51a952eb5c75933"
+                "reference": "33fd41a76e746b8fa96d00b49a23dadfa8334cdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/283b9f4f670e3a6fd6c4ff95c51a952eb5c75933",
-                "reference": "283b9f4f670e3a6fd6c4ff95c51a952eb5c75933",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/33fd41a76e746b8fa96d00b49a23dadfa8334cdf",
+                "reference": "33fd41a76e746b8fa96d00b49a23dadfa8334cdf",
                 "shasum": ""
             },
             "require": {
@@ -4662,7 +4665,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2017-12-10T08:01:53+00:00"
+            "time": "2018-01-06T05:45:45+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
