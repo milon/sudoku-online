@@ -112,16 +112,16 @@
         },
         {
             "name": "backpack/crud",
-            "version": "3.3.5",
+            "version": "3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "b2ffc93ebb93c177e250215166a651056dc8497b"
+                "reference": "9439535025a60fa0b12bd71aa0e913a823853f31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/b2ffc93ebb93c177e250215166a651056dc8497b",
-                "reference": "b2ffc93ebb93c177e250215166a651056dc8497b",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/9439535025a60fa0b12bd71aa0e913a823853f31",
+                "reference": "9439535025a60fa0b12bd71aa0e913a823853f31",
                 "shasum": ""
             },
             "require": {
@@ -183,7 +183,7 @@
                 "read",
                 "update"
             ],
-            "time": "2018-01-10T09:54:41+00:00"
+            "time": "2018-01-16T12:19:49+00:00"
         },
         {
             "name": "barryvdh/elfinder-flysystem-driver",
@@ -1294,16 +1294,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.28",
+            "version": "v5.5.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "cfafae1f2043208390a7c984e3070696f4969605"
+                "reference": "a47b50a5981c0cf0139939dfaea4191784b65acb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/cfafae1f2043208390a7c984e3070696f4969605",
-                "reference": "cfafae1f2043208390a7c984e3070696f4969605",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/a47b50a5981c0cf0139939dfaea4191784b65acb",
+                "reference": "a47b50a5981c0cf0139939dfaea4191784b65acb",
                 "shasum": ""
             },
             "require": {
@@ -1424,7 +1424,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-12-26T16:24:40+00:00"
+            "time": "2018-01-16T15:39:45+00:00"
         },
         {
             "name": "laravel/tinker",
