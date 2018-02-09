@@ -48,23 +48,23 @@
         },
         {
             "name": "backpack/base",
-            "version": "0.8.7",
+            "version": "0.8.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/Base.git",
-                "reference": "81931ed91a5d1a155559b9535fe0deea85e9d0cd"
+                "reference": "12dd0611a33bcfb229bd776922ac40f423a3ed79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/Base/zipball/81931ed91a5d1a155559b9535fe0deea85e9d0cd",
-                "reference": "81931ed91a5d1a155559b9535fe0deea85e9d0cd",
+                "url": "https://api.github.com/repos/Laravel-Backpack/Base/zipball/12dd0611a33bcfb229bd776922ac40f423a3ed79",
+                "reference": "12dd0611a33bcfb229bd776922ac40f423a3ed79",
                 "shasum": ""
             },
             "require": {
                 "almasaeed2010/adminlte": "2.3.*",
                 "creativeorange/gravatar": "~1.0",
                 "jenssegers/date": "^3.2",
-                "laravel/framework": "5.5.*",
+                "laravel/framework": "5.5.*|5.6.*",
                 "prologue/alerts": "^0.4.1"
             },
             "require-dev": {
@@ -108,20 +108,20 @@
                 "backpack",
                 "base"
             ],
-            "time": "2018-01-17T20:04:51+00:00"
+            "time": "2018-02-07T21:20:53+00:00"
         },
         {
             "name": "backpack/crud",
-            "version": "3.3.6",
+            "version": "3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "9439535025a60fa0b12bd71aa0e913a823853f31"
+                "reference": "cd6105acad0344bb6000ea067ed75c2cdb2e19da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/9439535025a60fa0b12bd71aa0e913a823853f31",
-                "reference": "9439535025a60fa0b12bd71aa0e913a823853f31",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/cd6105acad0344bb6000ea067ed75c2cdb2e19da",
+                "reference": "cd6105acad0344bb6000ea067ed75c2cdb2e19da",
                 "shasum": ""
             },
             "require": {
@@ -129,7 +129,6 @@
                 "barryvdh/laravel-elfinder": "^0.3.10",
                 "doctrine/dbal": "^2.5",
                 "intervention/image": "^2.3",
-                "laravelcollective/html": "~5.0",
                 "venturecraft/revisionable": "1.*"
             },
             "require-dev": {
@@ -183,7 +182,7 @@
                 "read",
                 "update"
             ],
-            "time": "2018-01-16T12:19:49+00:00"
+            "time": "2018-02-07T22:37:59+00:00"
         },
         {
             "name": "barryvdh/elfinder-flysystem-driver",
@@ -243,21 +242,21 @@
         },
         {
             "name": "barryvdh/laravel-elfinder",
-            "version": "v0.3.11",
+            "version": "v0.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-elfinder.git",
-                "reference": "e39c7831b68c8d2e4d84f2c43026e091f115e7ae"
+                "reference": "05e17d6dd41b4cc860a555c320bb108fdef09a44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-elfinder/zipball/e39c7831b68c8d2e4d84f2c43026e091f115e7ae",
-                "reference": "e39c7831b68c8d2e4d84f2c43026e091f115e7ae",
+                "url": "https://api.github.com/repos/barryvdh/laravel-elfinder/zipball/05e17d6dd41b4cc860a555c320bb108fdef09a44",
+                "reference": "05e17d6dd41b4cc860a555c320bb108fdef09a44",
                 "shasum": ""
             },
             "require": {
                 "barryvdh/elfinder-flysystem-driver": "^0.1.4|^0.2",
-                "illuminate/support": "5.0.x|5.1.x|5.2.x|5.3.x|5.4.x|5.5.x",
+                "illuminate/support": "5.0.x|5.1.x|5.2.x|5.3.x|5.4.x|5.5.x|5.6.x",
                 "league/flysystem": "^1.0",
                 "league/flysystem-cached-adapter": "^1.0",
                 "php": ">=5.4.0",
@@ -267,6 +266,11 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "0.3-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\Elfinder\\ElfinderServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -291,7 +295,7 @@
                 "laravel",
                 "tinymce"
             ],
-            "time": "2017-08-28T11:46:35+00:00"
+            "time": "2018-02-08T07:54:10+00:00"
         },
         {
             "name": "creativeorange/gravatar",
@@ -1488,71 +1492,6 @@
                 "psysh"
             ],
             "time": "2017-12-18T16:25:11+00:00"
-        },
-        {
-            "name": "laravelcollective/html",
-            "version": "v5.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "2f6dc39ab3655724a615fe8a652d8b7f04fc9ac6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/2f6dc39ab3655724a615fe8a652d8b7f04fc9ac6",
-                "reference": "2f6dc39ab3655724a615fe8a652d8b7f04fc9ac6",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/http": "5.5.*",
-                "illuminate/routing": "5.5.*",
-                "illuminate/session": "5.5.*",
-                "illuminate/support": "5.5.*",
-                "illuminate/view": "5.5.*",
-                "php": ">=7.0.0"
-            },
-            "require-dev": {
-                "illuminate/database": "5.5.*",
-                "mockery/mockery": "~0.9.4",
-                "phpunit/phpunit": "~5.4"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Collective\\Html\\HtmlServiceProvider"
-                    ],
-                    "aliases": {
-                        "Form": "Collective\\Html\\FormFacade",
-                        "Html": "Collective\\Html\\HtmlFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Collective\\Html\\": "src/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                },
-                {
-                    "name": "Adam Engebretson",
-                    "email": "adam@laravelcollective.com"
-                }
-            ],
-            "description": "HTML and Form Builders for the Laravel Framework",
-            "homepage": "http://laravelcollective.com",
-            "time": "2017-08-31T14:46:03+00:00"
         },
         {
             "name": "league/flysystem",
