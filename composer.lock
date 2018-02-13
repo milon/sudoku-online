@@ -1946,16 +1946,16 @@
         },
         {
             "name": "prologue/alerts",
-            "version": "0.4.1",
+            "version": "0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/prologuephp/alerts.git",
-                "reference": "2a7184a9f39ab6f6dde85dbe0b9c783241bf52ea"
+                "reference": "d3bf5d7ea480cbbf372bb7f80e23e193ce4862c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/prologuephp/alerts/zipball/2a7184a9f39ab6f6dde85dbe0b9c783241bf52ea",
-                "reference": "2a7184a9f39ab6f6dde85dbe0b9c783241bf52ea",
+                "url": "https://api.github.com/repos/prologuephp/alerts/zipball/d3bf5d7ea480cbbf372bb7f80e23e193ce4862c7",
+                "reference": "d3bf5d7ea480cbbf372bb7f80e23e193ce4862c7",
                 "shasum": ""
             },
             "require": {
@@ -1969,6 +1969,16 @@
                 "phpunit/phpunit": "~4.1"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Prologue\\Alerts\\AlertsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Alert": "Prologue\\Alerts\\Facades\\Alert"
+                    }
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Prologue\\Alerts\\": "src/"
@@ -1992,7 +2002,7 @@
                 "laravel",
                 "messages"
             ],
-            "time": "2017-01-24T13:22:25+00:00"
+            "time": "2018-02-08T11:29:22+00:00"
         },
         {
             "name": "psr/cache",
