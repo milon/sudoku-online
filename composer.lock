@@ -112,16 +112,16 @@
         },
         {
             "name": "backpack/crud",
-            "version": "3.3.10",
+            "version": "3.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "f4cf166c1d0b2293380ff95cb85595d5732f1fa7"
+                "reference": "443482a20af236c746c4d89ee14c4025fe87c5c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/f4cf166c1d0b2293380ff95cb85595d5732f1fa7",
-                "reference": "f4cf166c1d0b2293380ff95cb85595d5732f1fa7",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/443482a20af236c746c4d89ee14c4025fe87c5c6",
+                "reference": "443482a20af236c746c4d89ee14c4025fe87c5c6",
                 "shasum": ""
             },
             "require": {
@@ -182,7 +182,7 @@
                 "read",
                 "update"
             ],
-            "time": "2018-02-15T00:05:39+00:00"
+            "time": "2018-02-23T11:04:12+00:00"
         },
         {
             "name": "barryvdh/elfinder-flysystem-driver",
