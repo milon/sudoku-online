@@ -112,16 +112,16 @@
         },
         {
             "name": "backpack/crud",
-            "version": "3.3.11",
+            "version": "3.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "443482a20af236c746c4d89ee14c4025fe87c5c6"
+                "reference": "d84a84237a605a1464cd21d73041d3995c3bc2b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/443482a20af236c746c4d89ee14c4025fe87c5c6",
-                "reference": "443482a20af236c746c4d89ee14c4025fe87c5c6",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/d84a84237a605a1464cd21d73041d3995c3bc2b3",
+                "reference": "d84a84237a605a1464cd21d73041d3995c3bc2b3",
                 "shasum": ""
             },
             "require": {
@@ -182,7 +182,7 @@
                 "read",
                 "update"
             ],
-            "time": "2018-02-23T11:04:12+00:00"
+            "time": "2018-03-09T11:18:59+00:00"
         },
         {
             "name": "barryvdh/elfinder-flysystem-driver",
@@ -1299,16 +1299,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.37",
+            "version": "v5.5.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "cf750b00c77d0d73e889c86f7db6a0e13b8dea8c"
+                "reference": "a21ef7e51df831a7c38d24dcf8c4774ee0847526"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/cf750b00c77d0d73e889c86f7db6a0e13b8dea8c",
-                "reference": "cf750b00c77d0d73e889c86f7db6a0e13b8dea8c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/a21ef7e51df831a7c38d24dcf8c4774ee0847526",
+                "reference": "a21ef7e51df831a7c38d24dcf8c4774ee0847526",
                 "shasum": ""
             },
             "require": {
@@ -1319,7 +1319,7 @@
                 "league/flysystem": "~1.0",
                 "monolog/monolog": "~1.12",
                 "mtdowling/cron-expression": "~1.0",
-                "nesbot/carbon": "~1.20",
+                "nesbot/carbon": "^1.24.1",
                 "php": ">=7.0",
                 "psr/container": "~1.0",
                 "psr/simple-cache": "^1.0",
@@ -1429,7 +1429,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2018-03-07T14:11:09+00:00"
+            "time": "2018-03-09T17:24:53+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1795,20 +1795,20 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.23.0",
+            "version": "1.24.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "4a874a39b2b00d7e0146cd46fab6f47c41ce9e65"
+                "reference": "ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4a874a39b2b00d7e0146cd46fab6f47c41ce9e65",
-                "reference": "4a874a39b2b00d7e0146cd46fab6f47c41ce9e65",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41",
+                "reference": "ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
+                "php": ">=5.3.9",
                 "symfony/translation": "~2.6 || ~3.0 || ~4.0"
             },
             "require-dev": {
@@ -1844,7 +1844,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-02-28T09:22:05+00:00"
+            "time": "2018-03-09T15:49:34+00:00"
         },
         {
             "name": "nikic/php-parser",
