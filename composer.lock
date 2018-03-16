@@ -112,16 +112,16 @@
         },
         {
             "name": "backpack/crud",
-            "version": "3.3.12",
+            "version": "3.3.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "d84a84237a605a1464cd21d73041d3995c3bc2b3"
+                "reference": "4039e0c4b5b831ace86b39cfdc9ceeab1f880afa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/d84a84237a605a1464cd21d73041d3995c3bc2b3",
-                "reference": "d84a84237a605a1464cd21d73041d3995c3bc2b3",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/4039e0c4b5b831ace86b39cfdc9ceeab1f880afa",
+                "reference": "4039e0c4b5b831ace86b39cfdc9ceeab1f880afa",
                 "shasum": ""
             },
             "require": {
@@ -182,7 +182,7 @@
                 "read",
                 "update"
             ],
-            "time": "2018-03-09T11:18:59+00:00"
+            "time": "2018-03-16T07:12:28+00:00"
         },
         {
             "name": "barryvdh/elfinder-flysystem-driver",
@@ -303,12 +303,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/creativeorange/gravatar.git",
-                "reference": "a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2"
+                "reference": "9affd46be10f1ebb11d5d9f03440f804c09f2b59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/creativeorange/gravatar/zipball/a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2",
-                "reference": "a0e84f0c8e8922ad151168d6ebd8db6a1b2d8cd2",
+                "url": "https://api.github.com/repos/creativeorange/gravatar/zipball/9affd46be10f1ebb11d5d9f03440f804c09f2b59",
+                "reference": "9affd46be10f1ebb11d5d9f03440f804c09f2b59",
                 "shasum": ""
             },
             "require": {
@@ -1795,16 +1795,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.24.1",
+            "version": "1.24.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41"
+                "reference": "bba6c6e410c6b4317e37a9474aeaa753808c3875"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41",
-                "reference": "ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bba6c6e410c6b4317e37a9474aeaa753808c3875",
+                "reference": "bba6c6e410c6b4317e37a9474aeaa753808c3875",
                 "shasum": ""
             },
             "require": {
@@ -1844,7 +1844,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-03-09T15:49:34+00:00"
+            "time": "2018-03-10T10:10:14+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2399,16 +2399,16 @@
         },
         {
             "name": "studio-42/elfinder",
-            "version": "2.1.32",
+            "version": "2.1.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Studio-42/elFinder.git",
-                "reference": "1118be362d76b06cd4179a38caa193644f7ae45d"
+                "reference": "2d3a31f70e3c817417913ab54035717f26e3efce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/1118be362d76b06cd4179a38caa193644f7ae45d",
-                "reference": "1118be362d76b06cd4179a38caa193644f7ae45d",
+                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/2d3a31f70e3c817417913ab54035717f26e3efce",
+                "reference": "2d3a31f70e3c817417913ab54035717f26e3efce",
                 "shasum": ""
             },
             "require": {
@@ -2453,7 +2453,7 @@
             ],
             "description": "File manager for web",
             "homepage": "http://elfinder.org",
-            "time": "2018-02-07T00:04:43+00:00"
+            "time": "2018-03-14T08:59:23+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
